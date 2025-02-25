@@ -2,11 +2,11 @@
 session_start();
 include 'backend/db.php';
 
-$user_id = $_SESSION['user_id'];
+$student_id = $_SESSION['student_id'];
 $results = $conn->query("SELECT e.subject, r.score, r.total_marks 
                          FROM exam_results r
                          JOIN exam_schedule e ON r.exam_id = e.id
-                         WHERE r.user_id = $user_id");
+                         WHERE r.student_id = $user_id");
 
 ?>
 

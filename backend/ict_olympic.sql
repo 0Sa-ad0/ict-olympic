@@ -67,3 +67,30 @@ CREATE TABLE
         FOREIGN KEY (`exam_id`) REFERENCES `exam_schedule` (`id`) ON DELETE CASCADE,
         FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
     );
+
+-- Students Table
+CREATE TABLE
+    IF NOT EXISTS `students` (
+        `id` INT AUTO_INCREMENT PRIMARY KEY,
+        `name` VARCHAR(100) NOT NULL,
+        `email` VARCHAR(100) UNIQUE NOT NULL,
+        `mobile` VARCHAR(20) NOT NULL,
+        `institution` VARCHAR(255) NOT NULL,
+        `level` ENUM ('Secondary', 'Higher Secondary', 'University') NOT NULL,
+        `division` ENUM ('Departmental', 'Non-Departmental') DEFAULT NULL,
+        `regID` VARCHAR(50) UNIQUE NOT NULL,
+        `password` VARCHAR(255) NOT NULL
+    );
+
+-- Exam Participation Table
+CREATE TABLE
+    IF NOT EXISTS `exam_participation` (
+        `id` INT AUTO_INCREMENT PRIMARY KEY,
+        `student_id` INT NOT NULL,
+        `exam_id` INT NOT NULL,
+        `start_time` DATETIME DEFAULT NULL,
+        `submitted` BOOLEAN DEFAULT 0,
+        `score` INT DEFAULT NULL,
+        FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE,
+        FOREIGN KEY (`exam_id`) REFERENCES `exam_schedule` (`id`) ON DELETE CASCADE
+    );
