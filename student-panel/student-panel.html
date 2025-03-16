@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Panel - ICT Olympiad</title>
+    <link rel="stylesheet" href="student-panel.css" />
+    <script defer src="student-panel.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">ICT Olympiad - Student Panel</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Exam Schedule</a></li>
+            <li><a href="#">My Exams</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Results</a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Student Dashboard -->
+    <section class="student-dashboard">
+      <div class="container">
+        <h2>Welcome, Student</h2>
+        <p>Your Registration ID: <span id="registrationID"></span></p>
+
+        <!-- View Exam Schedule -->
+        <div class="student-box">
+          <h3>View Exam Schedule</h3>
+          <button onclick="viewExamSchedule()">Check Schedule</button>
+        </div>
+
+        <!-- Participate in Exams -->
+        <div class="student-box">
+          <h3>Participate in Exam</h3>
+          <button onclick="participateExam()">Enter Exam</button>
+        </div>
+
+        <!-- Payment Options -->
+        <div class="student-box">
+          <h3>Make Payment</h3>
+          <button onclick="makePayment()">Pay Now</button>
+        </div>
+
+        <!-- View Results -->
+        <div class="student-box">
+          <h3>View Results</h3>
+          <button onclick="viewResults()">Check Results</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 ICT Olympiad. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

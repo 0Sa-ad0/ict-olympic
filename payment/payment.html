@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment - ICT Olympiad</title>
+    <link rel="stylesheet" href="payment.css" />
+    <script defer src="payment.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">ICT Olympiad - Payment</h1>
+        <nav>
+          <ul>
+            <li><a href="student-panel.html">Dashboard</a></li>
+            <li><a href="exam-schedule.html">Exam Schedule</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="#">Payment</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+      <div class="container">
+        <h2>Complete Your Payment</h2>
+
+        <p>Registration ID: <strong id="regID">123456</strong></p>
+        <p>Amount: <strong>$10</strong></p>
+
+        <!-- Payment Method -->
+        <label for="paymentMethod">Choose Payment Method:</label>
+        <select id="paymentMethod">
+          <option value="card">Credit/Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="mobile">Mobile Banking</option>
+        </select>
+
+        <!-- Payment Details -->
+        <div id="cardDetails" class="payment-details">
+          <input type="text" id="cardNumber" placeholder="Card Number" />
+          <input type="text" id="cardExpiry" placeholder="MM/YY" />
+          <input type="text" id="cardCVV" placeholder="CVV" />
+        </div>
+
+        <div id="paypalDetails" class="payment-details">
+          <p>Redirecting to PayPal...</p>
+        </div>
+
+        <div id="mobileDetails" class="payment-details">
+          <input
+            type="text"
+            id="mobileNumber"
+            placeholder="Mobile Banking Number"
+          />
+          <input type="text" id="transactionID" placeholder="Transaction ID" />
+        </div>
+
+        <!-- Pay Button -->
+        <button id="payNowBtn">Pay Now</button>
+
+        <!-- Payment Status -->
+        <div id="paymentStatus"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 ICT Olympiad. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

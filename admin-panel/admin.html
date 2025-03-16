@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - ICT Olympiad</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script defer src="admin.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="container">
+        <h1 class="logo">Admin Panel</h1>
+        <nav>
+          <ul>
+            <li><a href="../homepage/ict.html">Home</a></li>
+            <li><a href="#">Questions</a></li>
+            <li><a href="#">Exams</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Results</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Admin Actions -->
+    <section class="admin-panel">
+      <div class="container">
+        <h2>Admin Dashboard</h2>
+
+        <!-- Set & Upload Questions -->
+        <div class="admin-box">
+          <h3>Upload Questions</h3>
+          <input type="file" id="questionFile" />
+          <button onclick="uploadQuestions()">Upload</button>
+        </div>
+
+        <!-- Set Exam Time -->
+        <div class="admin-box">
+          <h3>Set Exam Time</h3>
+          <input type="datetime-local" id="examTime" />
+          <button onclick="setExamTime()">Set Time</button>
+        </div>
+
+        <!-- Manage Students -->
+        <div class="admin-box">
+          <h3>Manage Students</h3>
+          <button onclick="manageStudents()">View Students</button>
+        </div>
+
+        <!-- Manage Payments -->
+        <div class="admin-box">
+          <h3>Manage Payments</h3>
+          <button onclick="managePayments()">View Payments</button>
+        </div>
+
+        <!-- Publish Results -->
+        <div class="admin-box">
+          <h3>Publish Results</h3>
+          <button onclick="publishResults()">Publish</button>
+        </div>
+
+        <!-- Generate Reports -->
+        <div class="admin-box">
+          <h3>Generate Reports</h3>
+          <button onclick="generateReports()">Generate</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2025 ICT Olympiad. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

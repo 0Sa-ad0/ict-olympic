@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #222222;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #ff5733;
+  color: white;
+  padding: 15px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://source.unsplash.com/1600x600/?technology,computer")
+    center/cover no-repeat;
+  color: black;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+}
+
+.hero .btn {
+  background: #222222;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Notice Section */
+.notice {
+  background: #ff5733;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Community Stats - Make Horizontal */
+.stats .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  background: white;
+}
+
+.stat-box {
+  background: #ff5733;
+  color: white;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  margin: 10px;
+  max-width: 250px;
+}
+
+/* Footer */
+footer {
+  background: #ff5733;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}

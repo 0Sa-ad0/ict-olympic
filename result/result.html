@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Result & Certificate</title>
+    <link rel="stylesheet" href="result.css" />
+    <script defer src="result.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">ICT Olympiad - Exam Result</h1>
+        <nav>
+          <ul>
+            <li><a href="student-panel.html">Dashboard</a></li>
+            <li><a href="exam-schedule.html">Exam Schedule</a></li>
+            <li><a href="#">Results</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Result Section -->
+    <section class="result-section">
+      <div class="container">
+        <h2>Exam Result</h2>
+        <p>Student Name: <strong id="studentName">John Doe</strong></p>
+        <p>Exam: <strong>Computer Science</strong></p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Your Answer</th>
+              <th>Correct Answer</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody id="resultTable">
+            <!-- Result data will be inserted dynamically -->
+          </tbody>
+        </table>
+
+        <h3>Total Score: <span id="totalScore">0</span>/100</h3>
+
+        <button onclick="generateCertificate()">Download Certificate</button>
+
+        <!-- Certificate Section -->
+        <div id="certificate" class="certificate">
+          <h2>Certificate of Achievement</h2>
+          <p>This is to certify that</p>
+          <h3 id="certStudentName">John Doe</h3>
+          <p>has successfully completed the ICT Olympiad</p>
+          <p>with a score of <span id="certScore">0</span>/100</p>
+          <p>Date: <span id="certDate"></span></p>
+          <button onclick="downloadCertificate()">Download as Image</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 ICT Olympiad. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

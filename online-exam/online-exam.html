@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Exam - ICT Olympiad</title>
+    <link rel="stylesheet" href="online-exam.css" />
+    <script defer src="online-exam.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">ICT Olympiad - Online Exam</h1>
+        <nav>
+          <ul>
+            <li><a href="student-panel.html">Dashboard</a></li>
+            <li><a href="exam-schedule.html">Exam Schedule</a></li>
+            <li><a href="#">Exam</a></li>
+            <li><a href="results.html">Results</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Exam Section -->
+    <section class="exam-section">
+      <div class="container">
+        <h2>Exam: Computer Science</h2>
+        <p>Start Time: <span id="examStartTime">2025-03-15T10:00:00</span></p>
+
+        <!-- Countdown Timer -->
+        <div class="countdown">
+          <h3>Time Left: <span id="timer">00:00:00</span></h3>
+        </div>
+
+        <!-- Start Exam Button -->
+        <button id="startExamBtn" disabled onclick="startExam()">
+          Start Exam
+        </button>
+
+        <!-- Exam Questions -->
+        <form id="examForm" style="display: none">
+          <!-- MCQ Question -->
+          <div class="question">
+            <h3>1. What is the full form of CPU?</h3>
+            <label
+              ><input type="radio" name="q1" value="A" /> Central Processing
+              Unit</label
+            >
+            <label
+              ><input type="radio" name="q1" value="B" /> Computer Personal
+              Unit</label
+            >
+            <label
+              ><input type="radio" name="q1" value="C" /> Central Personal
+              Unit</label
+            >
+          </div>
+
+          <!-- Written Question -->
+          <div class="question">
+            <h3>2. Explain the working of an Operating System.</h3>
+            <textarea
+              name="q2"
+              rows="4"
+              placeholder="Write your answer here..."
+            ></textarea>
+          </div>
+
+          <button type="submit">Submit Exam</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 ICT Olympiad. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
