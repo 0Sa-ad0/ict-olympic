@@ -1,18 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.getElementById("loginForm");
+  const loginForm = document.getElementById("loginForm");
 
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent actual form submission
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent actual form submission
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-        // Dummy authentication logic (replace with real backend authentication)
-        if (email === "user@example.com" && password === "password123") {
-            alert("Login Successful!");
+    // Send login request to the backend
+    fetch("../api/login.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(
+        password
+      )}`,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.message === "Login successful") {
+          alert("Login Successful!");
+          if (data.role === "student") {
             window.location.href = "../student-panel/student-panel.html"; // Redirect to student panel
+          } else if (data.role === "admin") {
+            window.location.href = "../admin-panel/admin.html"; // Redirect to admin panel
+          }
         } else {
-            alert("Invalid email or password. Please try again.");
+          alert(data.message);
         }
-    });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+      });
+  });
 });
