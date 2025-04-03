@@ -33,3 +33,12 @@ function viewResults() {
     alert("Redirecting to results page...");
     window.location.href = "results.html";
 }
+
+// Logout functionality
+function logout() {
+    // Clear session or token
+    localStorage.removeItem("studentToken"); // Adjust based on how the session is managed
+
+    // Redirect to login page
+    window.location.href = "../login-studs/login.html"; // Adjust the path as necessary
+}
