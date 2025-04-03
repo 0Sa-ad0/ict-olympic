@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loginForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent actual form submission
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
     // Send login request to the backend
@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
           alert("Login Successful!");
           if (data.role === "student") {
             window.location.href = "../student-panel/student-panel.html"; // Redirect to student panel
-          } else if (data.role === "admin") {
-            window.location.href = "../admin-panel/admin.html"; // Redirect to admin panel
           }
         } else {
           alert(data.message);
