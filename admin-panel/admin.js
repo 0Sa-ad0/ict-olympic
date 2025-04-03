@@ -23,6 +23,14 @@ function manageStudents() {
   alert("Redirecting to student management...");
 }
 
+function logout() {
+  // Clear session or token
+  localStorage.removeItem("adminToken"); // Adjust based on how the session is managed
+
+  // Redirect to login page
+  window.location.href = "../homepage/ict.html"; // Adjust the path as necessary
+}
+
 // Manage Payments
 function managePayments() {
   alert("Redirecting to payment management...");
