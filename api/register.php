@@ -28,7 +28,13 @@ if ($requestMethod == "POST") {
     $stmt->bind_param("ssssss", $name, $email, $password, $mobile, $institution, $level);
 
     if ($stmt->execute()) {
-        echo json_encode(["message" => "Registration successful"]);
+        $student_id = $conn->insert_id;
+        session_start();
+        $_SESSION['student_id'] = $student_id;
+        echo json_encode([
+            "message" => "Registration successful", 
+            "student_id" => $student_id
+        ]);
     } else {
         echo json_encode(["message" => "Error: " . $stmt->error]);
     }
