@@ -1,4 +1,6 @@
 <?php
+session_start(); // Start the session
+
 // Database connection
 $servername = "localhost";
 $username = "root"; // Change as needed
@@ -28,6 +30,7 @@ if ($requestMethod == "POST") {
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
+            $_SESSION['student_id'] = $user['id']; // Set student_id in session
             echo json_encode(["message" => "Login successful", "role" => "student"]);
         } else {
             echo json_encode(["message" => "Invalid password"]);

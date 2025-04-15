@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #1e2a38; /* Dark background color */
+  background: #1e2a38; /* Dark background color like Admin page */
   color: #ffffff; /* White text color for contrast */
 }
 
@@ -14,7 +14,7 @@ body {
   text-align: center;
 }
 
-/* Navbar */
+/* Header */
 header {
   background: #1e3a5f; /* Darker header background */
   color: white;
@@ -28,8 +28,7 @@ header .container {
 }
 
 .logo {
-  color: white;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
 }
 
@@ -47,71 +46,66 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
+  transition: 0.3s;
 }
 
-/* Registration Section */
-.registration {
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Payment Section */
+.payment-section {
   background: #1e3a5f; /* Darker background */
   padding: 40px 20px;
-  margin: 20px auto;
+  margin: 50px auto;
   width: 50%;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.registration h2 {
+h2 {
   margin-bottom: 20px;
+  color: white;
 }
 
-.form-group {
-  text-align: left;
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
+select,
+input {
+  width: 80%;
   padding: 10px;
   margin: 10px 0;
   display: block;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background: #00c6ff; /* Input fields with a light blue color */
-  color: black !important; /* Ensure text color is black */
+  background: #00c6ff; /* Dark input fields */
+  color: white; /* White text inside input */
 }
 
-.hidden {
+.payment-details {
   display: none;
 }
 
-/* Buttons */
-.btn {
-  background: #ff5733;
+/* Pay Button */
+#payNowBtn {
+  background: orangered; /* Light Blue color */
   color: white;
   padding: 12px 25px;
-  text-decoration: none;
-  font-size: 1em;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
   cursor: pointer;
-  margin-top: 15px;
-  display: inline-block;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-button[type="submit"]:hover {
+#payNowBtn:hover {
   background: #e04e2a; /* Hover effect to highlight the button */
 }
 
-.btn.disabled {
-  background: #bbb;
-  cursor: not-allowed;
+#paymentStatus {
+  margin-top: 20px;
+  font-weight: bold;
+  color: white;
 }
 
 /* Footer */
@@ -120,5 +114,5 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: 20px;
+  margin-top: 30px;
 }

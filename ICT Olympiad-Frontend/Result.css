@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e2a38; /* Dark background */
+    color: #ffffff; /* White text color */
+  }
+  
+  /* Container */
+  .container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* Header */
+  header {
+    background: #1e3a5f; /* Darker blue header */
+    color: white;
+    padding: 15px 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Result Section */
+  .result-section {
+    background: #1e3a5f; /* Dark section background */
+    padding: 40px 20px;
+    margin: 30px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .result-section h2 {
+    color: white;
+  }
+  
+  p {
+    font-size: 1.2em;
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #ddd;
+  }
+  
+  th,
+  td {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  th {
+    background: #00c6ff; /* Light blue table header */
+    color: white;
+  }
+  
+  /* Certificate Section */
+  .certificate {
+    display: none;
+    background: #1e3a5f;
+    padding: 30px;
+    border: 2px solid #00c6ff;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .certificate h2 {
+    color: #00c6ff;
+  }
+  
+  .certificate p {
+    font-size: 1.2em;
+  }
+  
+  /* Buttons */
+  button {
+    background: orangered;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background: #e04e2a;
+  }
+  
+  /* Footer */
+  footer {
+    background: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+  

@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e2a38; /* Dark background color */
+    color: #ffffff; /* White text color for contrast */
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #1e3a5f; /* Darker header background */
+    color: white;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Registration Section */
+.registration {
+    background: #1e3a5f; /* Darker background */
+    padding: 40px 20px;
+    margin: 50px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.registration h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input,
+.form-group select {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #00c6ff; /* Input fields with a light blue color */
+    color: white; /* White text inside input */
+}
+
+button[type="submit"] {
+    background: orangered; /* Light Blue color */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background: #e04e2a; /* Hover effect to highlight the button */
+}
+
+button.disabled {
+    background: #bbb; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    background: #1e3a5f; /* Dark footer background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
